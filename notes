@@ -2,4 +2,22 @@
 - you cant view resouce creation date from subscriptoion blade  and click resource provider
 - you cant view resouce creation date from RG blade and automation script
 - you cant view resouce creation date from RG blade and deployments button
+- you can monitoe vm metrics and logs using linux dianostic extension LAD 3.0
+- Rule2 blocks ports 50-60, which includes port 53, the DNS port. Internet users can reach to the Web server,
+since it uses port 80. If Rule2 is removed internet users can reach the DNS server as well.
+- Use availability zones to protect from datacenter level failures.
+- you could configure RG when deploy a vm using template from RM linrarry
+- Modify the VM size property of VM1, can be created as task create a scheduled runbook to increase the processor performance of VM1 at the end of each month.
+- DSC extension to use when to ensure NGINX is available to all vm after they deolyed.
+- in AKS cluster, container will be assinged ip in POD cidr, AKScluster will be assign IP from service cidr
+- 70% for 1h, and then 90% for 5 minutes. So, from the default of 1 it will scale out out 1 more. So, 2 in total.
+Box 2: 4
+90% for 1h and then 25% for 9minutes. So, from the default of 1 it will it scale in to the max 5 (60/5 = 12, which
+means 6 times scale out, because we have 5 minutes period of cool down). Then when it drops to 25% for 9
+minutes and it will scale in once after 5 mins (since the average of the last 5 minutes is under 30% ), so it will
+decrease by 1, so 4 in total. Then it will have a cooldown of 5 minutes before scaling in again, but since only 4
+minutes left from 9 minutes (9-5 = 4), it won't scale in again. So, 4 in total.
+- For Windows Server, the temporary disk is mounted as “D:\”. and so changes will be lost after reploy
+- If you resize the Scale Set all the VMs get resized at once, thus 4 is the correct answer. Automatic OS updates update 20% of the VMs at once, with a minimum of 1 VM instance at a time. Also 20%
+of 4 = 0.8.
 - 
