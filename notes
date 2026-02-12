@@ -20,4 +20,41 @@ minutes left from 9 minutes (9-5 = 4), it won't scale in again. So, 4 in total.
 - For Windows Server, the temporary disk is mounted as “D:\”. and so changes will be lost after reploy
 - If you resize the Scale Set all the VMs get resized at once, thus 4 is the correct answer. Automatic OS updates update 20% of the VMs at once, with a minimum of 1 VM instance at a time. Also 20%
 of 4 = 0.8.
-- 
+- swap the slots if we need to revert to the previous version of App1 as quickly as possible.
+- VM1 is affected by ransomware that encrypts data.
+You need to restore the latest backup of VM1.
+To which location can you restore the backup -->VM1 or new azure VM machine only
+Can perform file recovey of vm1 to --> any windows computer that has internet connectivity
+- If VM1 does not have the latest version of the Azure VM Agent (WaAppAgent.exe) installed, backup warning status could be deplyed
+- You receive a notification that VM1 will be affected by maintenance. you need to move VM1 to a different host immediately. --> moveing to different RG is not sufficient; you need to redeploy the VM
+- platform FaultDomain Count be 3 (since its in East US, Use 20 for platformUpdateDomainCount
+- Alerts in Azure Monitor can identify important information in your Log Analytics repository. They are created
+by alert rules that automatically run log searches at regular intervals, and if results of the log search match
+particular criteria, then an alert record is created and it can be configured to perform an automated response.
+The Log Analytics agent collects monitoring data from the guest operating system and workloads of virtual
+machines in Azure, other cloud providers, and on- premises. It collects data into a Log Analytics workspace.
+#300
+- New-AzResourceGroupDeployment.
+This cmdlet allows you to use a custom ARM template file to deploy resources to a resource group. For
+example:
+New-AzResourceGroup -Name $resourceGroupName -Location "$location"
+ResourceGroupName RG1.
+It’s one of parameters of New-AzResourceGroupDeployment to specify to which resource group you want to
+deploy resources.
+You could use New-AzVm to create a VM, but it doesn’t use a template. You would need to provide all
+parameters in the command line.
+
+- To deploy a YAML file, the command is:
+kubectl apply -f <file_name>.yaml
+
+- You Install the Microsoft Monitoring Agent VM agent to VM1 for create an Azure Log Analytics workspace and configure the data settings
+-Alerts in Azure Monitor can identify important information in your Log Analytics repository. They are created
+by alert rules that automatically run log searches at regular intervals, and if results of the log search match
+particular criteria, then an alert record is created and it can be configured to perform an automated response.
+The Log Analytics agent collects monitoring data from the guest operating system and workloads of virtual
+machines in Azure, other cloud providers, and on- premises. It collects data into a Log Analytics workspace
+
+- Install the Microsoft Azure Recovery Services Agent on new VM if want to restore backup to different VM
+-
+
+
