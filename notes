@@ -1,0 +1,5 @@
+- proximity placement of vm scale set should be in RG of same location
+- you cant view resouce creation date from subscriptoion blade  and click resource provider
+- you cant view resouce creation date from RG blade and automation script
+- you cant view resouce creation date from RG blade and deployments button
+- 
