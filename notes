@@ -55,6 +55,11 @@ The Log Analytics agent collects monitoring data from the guest operating system
 machines in Azure, other cloud providers, and on- premises. It collects data into a Log Analytics workspace
 
 - Install the Microsoft Azure Recovery Services Agent on new VM if want to restore backup to different VM
--
+- From th RG blsfr er vsn view which tyemplate was used for the development.
+- In order to revert the previous version of app a azure web appp quickly, the best way is to swap the slots.
+- File recovery from a VM could be done to any windows computer that has internet connectivity and we could restore VM1 to VM1 or newazure VM only.
+- Warning status in backup re-check status suggests that VM1 does not have latest version od azure vm agent waappagent.exe installed
+- Platform faultdomain domain count to match with region fault domain count, platform update domain count maximum is 20
+- New-AzResourceGroupDeployment cmdlet is  to use to acustom arm template file to deploy resources to a 
 
 
